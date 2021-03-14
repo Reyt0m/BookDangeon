@@ -1,0 +1,31 @@
+{
+    "manifest_version": 2,
+    "name": "bookLevel",
+    "description": "Google Chrome extention for adding book level",
+    "version": "1.0",
+    // "default_locale": "ja_jp",
+    "icons": {
+        "16": "./static/icons/knowledge.png"
+        // "16": "./static/icons/knowledge.svg",
+        // "32": "./static/icons/knowledge.svg",
+        // "48": "./static/icons/knowledge.svg"
+    },
+    "content_scripts": [{
+        "matches": ["http://*/*", "https://*/*" ],
+        "js": ["contentScripts.js"],
+        "css": ["contentScripts.css"]
+    }],
+  "browser_action": {
+        "default_icon": {
+            "16": "knowledge.png"
+        },
+        "default_title": "booklevel",
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "tabs",
+        "background",
+        "http://*/*",
+        "https://*/*"
+    ]
+}
