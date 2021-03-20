@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- jquery -->
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/jquery-2.1.4.min.js"></script>
+    <script src="./js/skill.bars.jquery.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./static/css/contentScripts.css">
+    <link rel="stylesheet" href="./static/css/style.css">
+  </head>
+  <body>
+    <table>
+      <tr>
+        <button id="done">読み終わった！</button>
+      </tr>
+      <tr>
+        <button id="yet">まだ！</button>
+      </tr>
+    </table>
+    
+    <!-- <br>
+      <div>
+      <span>次のレベルアップまで残り</span>
+      <span id="rest-exp">1</span>
+      <span>です</span>
+    </div> -->
+    <span id="your-name">あなた</span>
+    <span>のレベルは</span>
+    <span id="your-level">1</span>
+    <span>です</span>
+    <div id="bookLevelBar" class="skillbar skillbar-html" data-percent="88">
+      <div class="skillbar-title">読書レベル</div>
+      <div class="skillbar-bar"></div>
+      <div class="skill-bar-percent"></div>
+    </div>
+    <!-- <script src="./js/popup.js"></script> -->
+    <script src="./js/popup.js"></script>
+    <script src="./js/level.js"></script>
+  </body>
+</html>
