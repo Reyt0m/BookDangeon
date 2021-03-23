@@ -56,15 +56,15 @@ document.getElementsByTagName('button')[0].addEventListener("click", () => {
     }
 });
 
-jQuery( function($) {
-  $('.skillbar').skillBars({
-    from: 100*(EXPTABKLE[lv]-roleExp)/EXPTABLE[lv],	// バーの動くスタート位置
-    speed: 4000,  // 動くスピード
-    interval: 100, // 動き始めるまでの時間
-  });
-});
+// jQuery( function($) {
+//   $('.skillbar').skillBars({
+//     from: 100*(EXPTABKLE[lv]-roleExp)/EXPTABLE[lv],	// バーの動くスタート位置
+//     speed: 4000,  // 動くスピード
+//     interval: 100, // 動き始めるまでの時間
+//   });
+// });
 
-bookLevelBar.setAttribute('data-percent', 100*restExp/EXPTABKLE[lv]);
+// bookLevelBar.setAttribute('data-percent', 100*restExp/EXPTABKLE[lv]);
 document.getElementById('rest-exp').textContent = restExp;
 document.getElementById('your-level').textContent = lv;
 // document.getElementById('your-name').textContent = userName;

@@ -1,7 +1,7 @@
 {
-    "name": "bookLevel2",
+    "name": "bookLevel",
     "manifest_version": 2,
-    "version": "1.0",
+    "version": "1.1",
     "description": "Google Chrome extention for adding book level",
 
     "browser_action": {
@@ -12,30 +12,21 @@
             "32": "./static/icons/knowledge.png"
         }
     },
-    // "background": {
-    //     "scripts": [
-    //     //   "js/background.js"
-    //     ],
-    //     "persistent": false
-    // },
-    // "background":{
-    //     "scripts":["evntPage.js"],
-    //     "persistent":false
-    // },
     "content_scripts": [
         {
             "js": [
-                // "./js/jquery.min.js",
-                "./js/contentScript.js",
-                "./js/level.js"
-                // "./js/popup.js"
+                 "./js/jquery.min.js",
+                // "./js/contentScript.js",
+                "./js/level.js",
+                "./js/harding.js"
             ],
             "matches": [
                 "http://*/*",
                 "https://www.amazon.co.jp/*"
             ],
             "css":[
-                "./static/css/contentScripts.css"
+                "./static/css/contentScripts.css",
+                "./static/css/skillbar.css"
             ]
         }
     ],

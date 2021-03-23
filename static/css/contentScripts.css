@@ -1,14 +1,14 @@
 
 body {
     background-color:cornsilk;
-    max-width: 60%;
-    max-height: 50%;
-    width: 300rem;
-    height:600rem;
+    max-width: 20%;
+    max-height: 30%;
+    width: 100rem;
+    height:20rem;
 }
 
 .txt {
     color: white;
     font-size: 6.25px;
     font-size: 10rem;
-}w
+}
