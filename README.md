@@ -3,14 +3,15 @@
 拡張機能からwebアプリに転換し、難易度推定のレベルを上げる
 pythonの自然言語処理により、レビューの文章から難易度を推定するプログラムを作り、それをアプリ化する
 読書レベルとは言っているが、実際のところ文章慣れレベルでもある。
-
+# 基本的な仕様書
+https://hackmd.io/g84EhK-jSl2ZxYBEyVO8Ig?view
 #　使用言語
 html, css, Javascript(node.js), json
 
 
-# 起きたエラー一覧
+## 起きたエラー一覧
 
-##　デバック段階
+###　デバック段階
 
 - Default locale was specified, but \_locales subtree is missing.
   インストール時の問題。
@@ -20,7 +21,7 @@ html, css, Javascript(node.js), json
 
 - Could not load icon 'knowledge.svg' specified in 'browser_action'.
 
-# 基本事項
+## 基本事項
 
 icons
 Chrome Web Store や chrome://extensions で使われるアプリ（拡張機能）のアイコンです。
