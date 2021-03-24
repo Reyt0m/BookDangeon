@@ -11,7 +11,7 @@ html, css, Javascript(node.js), json
 
 ## 起きたエラー一覧
 
-###　デバック段階
+### デバック段階
 
 - Default locale was specified, but \_locales subtree is missing.
   インストール時の問題。
@@ -105,5 +105,3 @@ amazonのレビュー
 - A5	13級	18行	51字 918字 734字
 - 四六判	13級	17行	44字 748字 598字
 - B6	13級	16行	42字 672字 537字
-
-#　レコメンド機能
