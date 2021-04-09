@@ -9,4 +9,5 @@ html, css, Javascript(node.js), json
 # デバッグ方法
 chromeの拡張機能パッケージを登録するところで、booklevelを登録してもらえればブラウザで試せる形になります。
 基本的な情報はこちらを参照してください　https://qiita.com/RyBB/items/32b2a7b879f21b3edefc
-
+## 進行状況
+5/30を完成予定日としています
