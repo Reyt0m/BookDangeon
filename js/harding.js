@@ -1,9 +1,7 @@
-let element = document.createElement("button"); // <button></button> ができる
-element.innerHTML = "<del>Push Me</del>"; // <button><del>Push Me!</del></button> ができる
 
 let element = document.createElement("table"); // <button></button> ができる
 element.innerHTML = "<tr>この本のレベルは</tr>";
-element.innerHTML = "<tr>'roleLevel'です</tr>";
+element.innerHTML = <tr>roleLevel</tr>;
 let target = document.querySelector("#acrCustomerReviewText"); // 追加したい要素を見つけてくる
 target.appendChild(element); // 追加する
 
@@ -33,12 +31,12 @@ console.log(info[info.length - 1].textContent);
 var ISBN = info[info.length - 1].textContent.replace('-', '');
 console.log(ISBN);
 
-  var xhr = new XMLHttpRequest();
+var xhr = new XMLHttpRequest();
 xhr.responseType  = "document";
 
 xhr.onload = function(e){
   var dom = e.target.responseXML;
-  var blogs = dom.querySelectorAll('.infbox .dotted .ml10 .mt05 .pt05 ul li');
+  var bookInfo = dom.querySelectorAll('.infbox .dotted .ml10 .mt05 .pt05 ul li');
   for (var i = 0; i < blogs.length; i++) {
     var title = blogs[i].innerText;
     var url = blogs[i].getAttribute('href');
@@ -46,7 +44,18 @@ xhr.onload = function(e){
   }
 };
 
-xhr.open("get", "https://www.kinokuniya.co.jp/f/dsg-01-");
+xhr.open("get", "https://www.kinokuniya.co.jp/f/dsg-01-" + ISBN);
+xhr.send();
+
+// テスト用
+var xhr = new XMLHttpRequest();
+xhr.responseType  = "document";
+var info = document.getElementsByClassName('a-section a-spacing-none a-text-center rpi-attribute-value');
+console.log(info[info.length - 1].textContent);
+var ISBN = info[info.length - 1].textContent.replace('-', '');
+console.log(ISBN);
+
+xhr.open("get", "https://www.kinokuniya.co.jp/f/dsg-01-" + ISBN);
 xhr.send();
 
 // // 寸法抜き出し

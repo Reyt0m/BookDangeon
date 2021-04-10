@@ -12,17 +12,21 @@
             "32": "./static/icons/knowledge.png"
         }
     },
+    "background": [
+        {
+          "scripts": ["./js/harding.js"],
+          "persistent": false
+        }
+    ],
     "content_scripts": [
         {
             "js": [
-                 "./js/jquery.min.js",
-                 "./js/jquery-2.1.4.min.js",
+                 "./js/jquery-3.6.0.min.js",
                 "./js/level.js",
                 "./js/harding.js",
                 "./js/skill_bars_jquery.js"
             ],
             "matches": [
-                "http://*/*",
                 "https://www.amazon.co.jp/*"
             ],
             "css":[
@@ -31,11 +35,9 @@
             ]
         }
     ],
+
     "permissions": [
-        "tabs",
-        "https://*/*",
-        "http://*/*",
-        "storage",
-        "https://www.amazon.co.jp/*"
+        "https://www.amazon.co.jp/*",
+        "https://www.kinokuniya.co.jp/f/*"
     ]
 }
