@@ -41,8 +41,6 @@ default_popup : ツールバーのアイコンをクリックしたときに出�
   Web ページの中に挿入する CSS と JavaScript のことを「Content Scripts」と呼びます。
   セキュリティ上の理由で、この手の JavaScript は独自の実行環境（isolated world）を持ち、挿入先の Web ページの DOM にはアクセスできるんですが、そのページで定義した変数や関数にアクセスすることはできません。
 
-例えば、Web ページ側では jQuery1 系を利用していて、Content-Scripts 側では jQuery2 系を利用しても衝突することはありません。なぜならこの 2 種類のスクリプトはそれぞれ「別ワールド」に住んでいるので、お互いに干渉することがないからです。
-
 数多くある 「Chrome.\* API」の中で、Content-Scripts は下記の一部の API しか利用できない制限があります。
 ただし、「background ページ」とメッセージのやり取りをすることで「間接的に」利用することは可能です（後述）。
 
@@ -52,6 +50,10 @@ default_popup : ツールバーのアイコンをクリックしたときに出�
 - event-page
   Background-Page の設定で、"persistent": false にすることで、いわゆる「Event Pages」にすることができます。
   Background-Page との違いは、「常に動いているわけではない
+
+### js 基本文法　復習
+- for ([初期化式]; [条件式]; [加算式])
+  文
 
 ##  難易度設定方法
 ### 書評法　
@@ -91,6 +93,22 @@ document.titleでタイトルを抜き出し、それから、グーグル検索
 
 amazonのレビュー
 単語数は紀伊国屋から撮ってくるhttps://www.kinokuniya.co.jp/f/dsg-01-9784877710514
+## amazonレビューから難しさを推定する方法
+nodeを導入しreactを入れる。その後、kuromojiによる形態素解析を行う。
+
+react を入れるための一連の流れは、
+```npx create-react-app my-app```
+```manifest書き換え```
+```.env INLINE_RUNTIME_CHUNK=false```
+```npm run build```
+つまり、npm startがない。いきなり本番と同様。個々の環境整備　4/15
+https://mem-archive.com/2019/12/31/post-2218/
+
+難易度推定のための、文章を抜き取る方法。
+dom操作によって、レビュー文本体のspanをリストで全部抜き出す必要がある。
+
+
+
 ##　文字の取得方法
 該当箇所を配列に放り込み、配列から検索をかける
 最終的にxページ数のxを取得できればいい。

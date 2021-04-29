@@ -1,7 +1,7 @@
 {
     "name": "bookLevel",
     "manifest_version": 2,
-    "version": "1.1",
+    "version": "1.2",
     "description": "Google Chrome extention for adding book level",
 
     "browser_action": {
@@ -12,32 +12,52 @@
             "32": "./static/icons/knowledge.png"
         }
     },
-    "background": [
-        {
-          "scripts": ["./js/harding.js"],
-          "persistent": false
-        }
-    ],
+    // "background": [
+    //     {
+    //       "scripts": ["./js/harding.js"],
+    //       "persistent": false
+    //     }
+    // ],
+    // "content_scripts": [
+    //     {
+    //         "js": [
+    //              "./js/jquery-3.6.0.min.js",
+    //             "./js/level.js",
+    //             "./js/harding.js",
+    //             "./js/skill_bars_jquery.js"
+    //         ],
+    //         "matches": [
+    //             "https://www.amazon.co.jp/*"
+    //         ],
+    //         "css":[
+    //             "./static/css/contentScripts.css",
+    //             "./static/css/skillbar.css"
+    //         ]
+    //     }
+    // ],
     "content_scripts": [
         {
             "js": [
-                 "./js/jquery-3.6.0.min.js",
-                "./js/level.js",
-                "./js/harding.js",
-                "./js/skill_bars_jquery.js"
+                "./getHard/kuromoji.js",
+                "./getHard/getHard.js"
             ],
             "matches": [
                 "https://www.amazon.co.jp/*"
             ],
             "css":[
-                "./static/css/contentScripts.css",
-                "./static/css/skillbar.css"
+                "./static/css/contentScripts.css"
             ]
         }
     ],
 
     "permissions": [
         "https://www.amazon.co.jp/*",
-        "https://www.kinokuniya.co.jp/f/*"
-    ]
+        "https://www.kinokuniya.co.jp/f/*",
+        "contextMenus",
+        "tabs",
+        "storage",
+        "unlimitedStorage"
+    ],
+    "web_accessible_resources": ["/kuromoji/dict/*"]
+
 }
